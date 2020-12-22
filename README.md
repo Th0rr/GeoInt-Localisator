@@ -18,7 +18,9 @@ If you want to know if your query is correct, check it on google maps before and
 	Ex: -s 0.5
 -o/--output => Export to text file 
 	Ex: -o address.txt
+
 -M/--map => Show location of targets by pair on a map (saved locally)
+
 -A/--AInfos => Gives you the whole addresses with reverse-geocoding (slower), use "full"
 	for all addresses, and "selection" to get only the addresses you will selected
 	We don't recommend using the full option if you expect a lot of results.
@@ -33,7 +35,7 @@ To select an item in result screens :
 # Map example 
 ![Result screen](map_example.png)
 
-# Install with pîp
+# Install with pip
 pip install -r "requirements.txt"
 
 
