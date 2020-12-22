@@ -1,0 +1,10 @@
+numpy==1.9.3
+beautifulsoup4
+haversine
+requests
+selenium
+geopy
+tabulate
+scipy==1.5.3
+argparse
+reverse_geocoder
