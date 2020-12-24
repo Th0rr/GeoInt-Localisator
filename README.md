@@ -1,5 +1,6 @@
 # GeoIntLocalisator
  Simple scrapping tool in Python 3 using selenium to find quickly the distance between two generic locations (supermarket, store...)
+
  Typically used for GeoInt on a picture with two stores visually detectables.
  This tools does not use an API.
 
@@ -20,12 +21,14 @@ If you want to know if your query is correct, check it on google maps before and
 -o/--output => Export to text file 
 	Ex: -o address.txt
 
--M/--map => Show location of targets by pair on a map (saved locally)
+-M/--map => Create map and show location of targets by pair on a map (saved locally)
 
 -A/--AInfos => Gives you the whole addresses with reverse-geocoding (slower), use "full"
 	for all addresses, and "selection" to get only the addresses you will selected
 	We don't recommend using the full option if you expect a lot of results.
 	Ex : -A selection
+
+	Bug : In some cases, the reverse geocoding can lead to false results being displayed on the map.
 
 To select an item in result screens :
 ![Result screen](result_table.png)

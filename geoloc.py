@@ -46,7 +46,7 @@ def selenium_search(query: str) -> [str]: # => address or name + global location
 	for i in range(2): # try again if an error occurred
 		add_list = scrape_addresses(driver,query)
 		if add_list:
-			print(len(add_list)+" has been found")
+			print(len(add_list)," addresses has been found")
 			return add_list
 
 def find_addresses_GPS(add_list, query: str) ->{str:(float,float,str)}:

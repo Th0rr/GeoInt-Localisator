@@ -10,7 +10,7 @@ from web import progress
 
 def select_element(final_results):
 	'''return elements selected from final_results by indice '''
-	ch = input("Select the pair to examinate\nPress \"q\" to quit\n")
+	ch = input("Select the pair to examine\nPress \"q\" to quit\n")
 	try:
 		if "-" in ch: #"1-4"
 			ch = ch.split("-")
