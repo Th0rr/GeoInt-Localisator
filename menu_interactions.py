@@ -8,9 +8,13 @@ from progress.bar import Bar
 from web import progress
 
 
-def select_element(final_results):
+def select_element(final_results,selection):
 	'''return elements selected from final_results by indice '''
-	ch = input("Select the pair to examine\nPress \"q\" to quit\n")
+	if not selection:
+		ch = input("Select the pairs to act on\nPress \"q\" to quit\n")
+	else:
+		ch = "0-"+str(selection)
+
 	try:
 		if "-" in ch: #"1-4"
 			ch = ch.split("-")

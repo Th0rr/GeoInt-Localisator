@@ -16,11 +16,15 @@ parser.add_argument(
 
 parser.add_argument(
 	'-s', '--scope', required=False, type=float,default=0.75, 
-	help='filter results above specified distance in a locations pair (km) Ex: -s 0.5')
+	help='filter results above specified distance in a locations pair (km). Ex: -s 0.5\n Value by default is 0.75')
 
 parser.add_argument(
 	'-M','--map',action='store_true',
 	help='Show on a map location of targets by pair')
+
+parser.add_argument(
+	'-S','--Select',type=int,required=False,
+	help='Define the first n results to select')
 
 parser.add_argument(
 	'-A','--AInfos',type=str,default="selection",choices=["full","selection"],
@@ -41,7 +45,10 @@ if args.queries :
 		write_to_text(final_results,args.output)
 
 	while 1:
-		selection = select_element(final_results)
+		if not args.AInfos and not args.map and not args.output: break;
+
+		selection = select_element(final_results,args.Select)
+
 		if args.AInfos == "selection":
 			get_full_addresses(selection)
 			if args.output:

@@ -1,7 +1,7 @@
 # GeoIntLocalisator
- Simple scrapping tool in Python 3 using selenium to find quickly the distance between two generic locations (supermarket, store...)
+ Simple scrapping tool in Python 3 using selenium to find quickly the distance between two unknown generic locations (supermarket, store...)
 
- Typically used for GeoInt on a picture with two stores visually detectables.
+ Typically used for GeoInt on a picture where you can recognize two generic element in the background (ie a park and a store).
  This tools does not use an API.
 
 # Features 
@@ -12,32 +12,35 @@
 
 # Use
 -q/--query => Google map queries 
-	Ex: -q town store1!town store2 additional_query_info
-If you want to know if your query is correct, check it on google maps before and see if you obtain desired result
+Ex: -q town store1!town store2 additional_query_info
+If you want to know if your query is correct, check it on google maps before and see if you obtain desired result.
+It is for instance
 
--s/--scope => Filter results above specified distance in a locations pair (km) 
-	Ex: -s 0.5
+-s/--scope => Filter results above specified distance in a locations pair (km). Default value is 0.75.
+Ex: -s 0.5
 
 -o/--output => Export to text file 
-	Ex: -o address.txt
+Ex: -o address.txt
 
--M/--map => Create map and show location of targets by pair on a map (saved locally)
+-M/--map => Create map and show location of targets by pair on a local map.
 
 -A/--AInfos => Gives you the whole addresses with reverse-geocoding (slower), use "full"
 	for all addresses, and "selection" to get only the addresses you will selected
 	We don't recommend using the full option if you expect a lot of results.
-	Ex : -A selection
+Ex : -A selection
+Bug : In some cases, the reverse geocoding can lead to false results being displayed on the map. This is due to a geopy data error.
 
-	Bug : In some cases, the reverse geocoding can lead to false results being displayed on the map.
+-S/--Select => Select automatically the first n results. This is especially useful if you want to automate the script.
 
-To select an item in result screens :
+# Examples :
+Result screen :
 ![Result screen](result_table.png)
+0 => select element 0
 1-4 => select elements from 1 to 4
-
 1,4 => select element 1 and 4
 
 
-# Map example 
+Map :
 ![Result screen](map_example.png)
 
 # Install with pip
