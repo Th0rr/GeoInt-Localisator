@@ -11,7 +11,7 @@ from const import *
 
 
 def get_coord_by_geopy(address: str,query: str) -> (float,float):
-	time.sleep(WAIT_TIME) # avoid getting blacklisted by geopy
+	#time.sleep(WAIT_TIME) # avoid getting blacklisted by geopy
 	if "," in address:
 		address = address.split(",")[1] # fix some error where address is not detected correctly
 	try :
@@ -31,7 +31,7 @@ def get_coord_by_geopy(address: str,query: str) -> (float,float):
 
 def get_address_by_geopy(coords: (float,float)) -> str:
 	"""take GPS coords as Input and return full address """
-	time.sleep(WAIT_TIME)
+	#time.sleep(WAIT_TIME)
 	geolocator = Nominatim(user_agent="georev")
 	location = geolocator.reverse(coords)
 	if location :
@@ -45,7 +45,8 @@ def selenium_search(query: str) -> [str]: # => address or name + global location
 	driver = webdriver.Firefox() 
 	for i in range(2): # try again if an error occurred
 		add_list = scrape_addresses(driver,query)
-		if add_list is not None:
+		if add_list:
+			print(len(add_list)+" has been found")
 			return add_list
 
 def find_addresses_GPS(add_list, query: str) ->{str:(float,float,str)}:

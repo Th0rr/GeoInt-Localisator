@@ -1,7 +1,7 @@
 # GeoIntLocalisator
  Simple scrapping tool in Python 3 using selenium to find quickly the distance between two generic locations (supermarket, store...)
  Typically used for GeoInt on a picture with two stores visually detectables.
- Since it doesn't use an API, the execution time is pretty slow as Nominatim impose a 1s delay between each query.
+ This tools does not use an API.
 
 # Features 
 -	Display a list of locations pairs with minimum distance each
@@ -16,6 +16,7 @@ If you want to know if your query is correct, check it on google maps before and
 
 -s/--scope => Filter results above specified distance in a locations pair (km) 
 	Ex: -s 0.5
+
 -o/--output => Export to text file 
 	Ex: -o address.txt
 
@@ -29,6 +30,7 @@ If you want to know if your query is correct, check it on google maps before and
 To select an item in result screens :
 ![Result screen](result_table.png)
 1-4 => select elements from 1 to 4
+
 1,4 => select element 1 and 4
 
 

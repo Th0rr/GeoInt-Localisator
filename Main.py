@@ -44,7 +44,8 @@ if args.queries :
 		selection = select_element(final_results)
 		if args.AInfos == "selection":
 			get_full_addresses(selection)
-			write_to_text(final_results,args.output+"_selection")
+			if args.output:
+				write_to_text(final_results,args.output+"_selection")
 		if selection:
 			break;
 	if args.map:
