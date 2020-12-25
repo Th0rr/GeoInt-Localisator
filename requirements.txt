@@ -8,3 +8,4 @@ tabulate
 scipy==1.5.3
 argparse
 reverse_geocoder
+progress
