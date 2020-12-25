@@ -3,6 +3,7 @@ from gmapplot import create_map
 import webbrowser
 import sys
 import os
+import subprocess
 from geoloc import get_address_by_geopy
 from progress.bar import Bar
 from web import progress
@@ -34,17 +35,6 @@ def select_element(final_results,selection):
 		print("Enter a number please, use - to select a range of continuous elements "
 		 "and , to select several elements")
 
-def get_full_addresses(selection):
-	try :
-		for i,el in enumerate(selection):	
-			progress(i,len(selection),status='Reverse geocoding...')
-			sys.stdout.write('\r')
-			a1 = get_address_by_geopy(el[3])
-			a2 = get_address_by_geopy(el[4])
-			if a1: el[1] = a1
-			if a2: el[2] = a2
-	except ValueError :
-		print("Error in element value")
 
 def mapping(selection,command_line):
 	now = datetime.now()
@@ -55,7 +45,7 @@ def mapping(selection,command_line):
 	name = name.replace(":",",")
 	m.save(name)
 	move_file_by_ext("Maps",".html")
-	os.startfile(name)
+	webbrowser.open(os.path.join(os.getcwd(),"Maps",name))
 
 
 def write_to_text(final_results,filename):
@@ -67,8 +57,21 @@ def write_to_text(final_results,filename):
 				else: 
 					f.write("{0}\n".format(el))
 
+
 def move_file_by_ext(out_dir,ext):
     for file in os.listdir(os.getcwd()):
         if file.endswith(ext):
             if file and os.path.isdir(out_dir):
                 os.replace(file,os.path.join(out_dir,file))
+
+
+def get_full_addresses(selection):
+	try :
+		for i,el in enumerate(selection):	
+			progress(i,len(selection),status='Reverse geocoding...')
+			a1 = get_address_by_geopy(el[3])
+			a2 = get_address_by_geopy(el[4])
+			if a1: el[1] = a1
+			if a2: el[2] = a2
+	except ValueError :
+		print("Error in element value")

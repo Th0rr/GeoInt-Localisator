@@ -26,11 +26,11 @@ parser.add_argument(
 	'-S','--Select',type=int,required=False,
 	help='Define the first n results to select')
 
-parser.add_argument(
-	'-A','--AInfos',type=str,default="selection",choices=["full","selection"],
-	help="""Gives you the whole addresses with reverse-geocoding (slower), use \"full\"
-	for all addresses, and \"selection\" to get only the addresses you will selected\n
-	We don\'t recommend using the full option if you expect a lot of results""")
+#parser.add_argument(
+#	'-A','--AInfos',type=str,choices=["full","selection"],
+#	help="""Gives you the whole addresses with reverse-geocoding (slower), use full
+#	for all addresses, and selection to get only the addresses you will selected\n
+#	We don\'t recommend using the full option if you expect a lot of results""")
 
 args = parser.parse_args()
 
@@ -39,20 +39,21 @@ if args.queries :
 	final_results = broad_search(command_line[0],command_line[1],args)
 	print_results(final_results,command_line[0],command_line[1])
 
-	if args.AInfos == "full":
-		get_full_addresses(final_results)
+	#if args.AInfos == "full":
+	#	get_full_addresses(final_results)
 	if args.output:
 		write_to_text(final_results,args.output)
 
 	while 1:
-		if not args.AInfos and not args.map and not args.output: break;
+		if not args.map and not args.output: break;
 
 		selection = select_element(final_results,args.Select)
-
+		"""
 		if args.AInfos == "selection":
 			get_full_addresses(selection)
 			if args.output:
 				write_to_text(final_results,args.output+"_selection")
+		"""
 		if selection:
 			break;
 	if args.map:

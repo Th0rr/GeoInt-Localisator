@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e04ab77671d14fffbea2010f4a32cf30 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_e04ab77671d14fffbea2010f4a32cf30" ></div>
+        
+</body>
+<script>    
+    
+            var map_e04ab77671d14fffbea2010f4a32cf30 = L.map(
+                "map_e04ab77671d14fffbea2010f4a32cf30",
+                {
+                    center: [48.84, 2.32],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_e04ab77671d14fffbea2010f4a32cf30);
+
+            
+
+        
+    
+            var tile_layer_daa77d0cf7624552a34f99cfaf31902e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e04ab77671d14fffbea2010f4a32cf30);
+        
+    
+            var marker_cluster_3f5e44a864044fdfa725871fc1a3a78e = L.markerClusterGroup(
+                {}
+            );
+            map_e04ab77671d14fffbea2010f4a32cf30.addLayer(marker_cluster_3f5e44a864044fdfa725871fc1a3a78e);
+        
+    
+            var marker_8f61ba1b20d146a496f3d1202af6a92c = L.marker(
+                [48.82, 2.31],
+                {}
+            ).addTo(marker_cluster_3f5e44a864044fdfa725871fc1a3a78e);
+        
+    
+            var icon_d8c1237494cb4141b73d3fd00b3e7fa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "location-arrow", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8f61ba1b20d146a496f3d1202af6a92c.setIcon(icon_d8c1237494cb4141b73d3fd00b3e7fa4);
+        
+    
+        var popup_129b19c4414341e895f870ac52027e8b = L.popup({"maxWidth": 2650});
+
+        
+            var html_546fe685799b4149a91626c748cdc1e8 = $(`<div id="html_546fe685799b4149a91626c748cdc1e8" style="width: 100.0%; height: 100.0%;"><a href =https://www.google.fr/maps/place/11+villa+houssay> 	Street View</a><br><p>address"</p></div>`)[0];
+            popup_129b19c4414341e895f870ac52027e8b.setContent(html_546fe685799b4149a91626c748cdc1e8);
+        
+
+        marker_8f61ba1b20d146a496f3d1202af6a92c.bindPopup(popup_129b19c4414341e895f870ac52027e8b)
+        ;
+
+        
+    
+    
+            var marker_2af76fe2baf94af58b2fec53d7c9abc4 = L.marker(
+                [48.84, 2.33],
+                {}
+            ).addTo(marker_cluster_3f5e44a864044fdfa725871fc1a3a78e);
+        
+    
+            var icon_ff6851c2992d46b88f5b163bb7d54407 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "location-arrow", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2af76fe2baf94af58b2fec53d7c9abc4.setIcon(icon_ff6851c2992d46b88f5b163bb7d54407);
+        
+    
+        var popup_063e80146ae147e3b76a3adca5b891ad = L.popup({"maxWidth": 2650});
+
+        
+            var html_9861c2a0020c462e8d519c91fa945bcc = $(`<div id="html_9861c2a0020c462e8d519c91fa945bcc" style="width: 100.0%; height: 100.0%;"><a href =https://www.google.fr/maps/place/11+villa+houssay> 	Street View</a><br><p>address</p></div>`)[0];
+            popup_063e80146ae147e3b76a3adca5b891ad.setContent(html_9861c2a0020c462e8d519c91fa945bcc);
+        
+
+        marker_2af76fe2baf94af58b2fec53d7c9abc4.bindPopup(popup_063e80146ae147e3b76a3adca5b891ad)
+        ;
+
+        
+    
+    
+            var poly_line_33a36e2489f74e0a9ae12a31aeab82dd = L.polyline(
+                [[48.82, 2.31], [48.84, 2.33]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 0.7, "stroke": true, "weight": 7}
+            ).addTo(map_e04ab77671d14fffbea2010f4a32cf30);
+        
+    
+            poly_line_33a36e2489f74e0a9ae12a31aeab82dd.bindTooltip(
+                `<div>
+                     N°km
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

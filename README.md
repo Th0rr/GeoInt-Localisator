@@ -24,12 +24,6 @@ Ex: -o address.txt
 
 -M/--map => Create map and show location of targets by pair on a local map.
 
--A/--AInfos => Gives you the whole addresses with reverse-geocoding (slower), use "full"
-	for all addresses, and "selection" to get only the addresses you will selected
-	We don't recommend using the full option if you expect a lot of results.<br/>
-Ex : -A selection
-Bug : In some cases, the reverse geocoding can lead to false results being displayed on the map. This is due to a geopy data error.
-
 -S/--Select => Select automatically the first n results. This is especially useful if you want to automate the script.
 
 # Examples :
@@ -46,6 +40,17 @@ Map :
 # Install with pip
 pip install -r "requirements.txt"
 
-
 Driver is in the repository but here is the official link with the mozilla version :
 https://github.com/mozilla/geckodriver/releases
+
+# Issues :
+Nominatim is sometimes inaccurate with Geolocation, so if you use the -M option, make sure to check the street view of the location to have it right.
+
+# In progress 
+Getting reverse geocoding for more detailed addresses
+
+-A/--AInfos => Gives you the whole addresses with reverse-geocoding (slower), use "full"
+	for all addresses, and "selection" to get only the addresses you will selected
+	We don't recommend using the full option if you expect a lot of results.<br/>
+Ex : -A selection
+Bug : In some cases, the reverse geocoding can lead to false results being displayed on the map. This is due to a geopy data error.
