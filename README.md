@@ -36,9 +36,7 @@ Bug : In some cases, the reverse geocoding can lead to false results being displ
 Result screen :
 ![Result screen](Examples//result_table.png)
 0 => select element 0
-
 1-4 => select elements from 1 to 4
-
 1,4 => select element 1 and 4
 
 
