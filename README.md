@@ -34,14 +34,14 @@ Bug : In some cases, the reverse geocoding can lead to false results being displ
 
 # Examples :
 Result screen :
-![Result screen](result_table.png)
+![Result screen](Examples\result_table.png)
 0 => select element 0
 1-4 => select elements from 1 to 4
 1,4 => select element 1 and 4
 
 
 Map :
-![Result screen](map_example.png)
+![Result screen](Examples\map_example.png)
 
 # Install with pip
 pip install -r "requirements.txt"

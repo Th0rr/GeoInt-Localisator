@@ -2,6 +2,7 @@ import bs4
 from bs4 import BeautifulSoup
 import webbrowser
 from sys import stdout
+import requests
 import sys
 import time
 from const import *
@@ -84,3 +85,10 @@ def progress(count, total, status=''):
 
     sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     sys.stdout.flush() 
+
+def scrape_image(address):
+	url = "https://www.google.fr/maps/place/"+address
+	time.sleep(3)
+	
+	print(urlimg)
+	driver.quit()

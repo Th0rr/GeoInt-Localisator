@@ -54,6 +54,7 @@ def mapping(selection,command_line):
 	name = name.replace(" ","_")
 	name = name.replace(":",",")
 	m.save(name)
+	move_file_by_ext("Maps",".html")
 	os.startfile(name)
 
 
@@ -65,3 +66,9 @@ def write_to_text(final_results,filename):
 					f.write("{0}!\n".format(el))
 				else: 
 					f.write("{0}\n".format(el))
+
+def move_file_by_ext(out_dir,ext):
+    for file in os.listdir(os.getcwd()):
+        if file.endswith(ext):
+            if file and os.path.isdir(out_dir):
+                os.replace(file,os.path.join(out_dir,file))
