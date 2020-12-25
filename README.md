@@ -1,13 +1,13 @@
 # GeoIntLocalisator
  Simple scrapping tool in Python 3 using selenium to find quickly the distance between two unknown generic locations (supermarket, store...)
 
- Typically used for GeoInt on a picture where you can recognize two generic element in the background (ie a park and a store).
+ Typically used for GeoInt on a picture where you can recognize two generic element in the background (i.e a park and a store).
  This tool does not use an API key.
 
 # Features 
--	Display a list of locations pairs with minimum distance each
--	Can show them on a local map
--	Save them to text
+-	Display a list of locations pairs sorted by minimum distance
+-	Can show them on a local OSM map (.html)
+-	Save them to text file
 
 
 # Use
@@ -53,4 +53,3 @@ Getting reverse geocoding for more detailed addresses
 	for all addresses, and "selection" to get only the addresses you will selected
 	We don't recommend using the full option if you expect a lot of results.<br/>
 Ex : -A selection
-Bug : In some cases, the reverse geocoding can lead to false results being displayed on the map. This is due to a geopy data error.
