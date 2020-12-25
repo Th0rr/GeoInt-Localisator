@@ -2,7 +2,7 @@
  Simple scrapping tool in Python 3 using selenium to find quickly the distance between two unknown generic locations (supermarket, store...)
 
  Typically used for GeoInt on a picture where you can recognize two generic element in the background (ie a park and a store).
- This tools does not use an API.
+ This tool does not use an API key.
 
 # Features 
 -	Display a list of locations pairs with minimum distance each
@@ -35,9 +35,9 @@ Bug : In some cases, the reverse geocoding can lead to false results being displ
 # Examples :
 Result screen :
 ![Result screen](Examples//result_table.png)
-0 => select element 0
-1-4 => select elements from 1 to 4
-1,4 => select element 1 and 4
+0 => select element 0<br/>
+1-4 => select elements from 1 to 4<br/>
+1,4 => select element 1 and 4<br/>
 
 
 Map :
