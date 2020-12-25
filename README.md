@@ -14,7 +14,7 @@
 -q/--query => Google map queries<br/> 
 Ex: -q town store1!town store2 additional_query_info<br/>
 If you want to know if your query is correct, check it on google maps before and see if you obtain desired result.
-It is for instance
+It is for instance possible to add words like "clothes" to make sure scraped addresses are relevant.<br/>
 
 -s/--scope => Filter results above specified distance in a locations pair (km). Default value is 0.75.<br/>
 Ex: -s 0.5
@@ -36,7 +36,7 @@ Bug : In some cases, the reverse geocoding can lead to false results being displ
 Result screen :
 ![Result screen](Examples//result_table.png)
 0 => select element 0<br/>
-1-4 => select elements from 1 to 4<br/>
+1-4 => select elements 1 to 4<br/>
 1,4 => select element 1 and 4<br/>
 
 

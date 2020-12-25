@@ -5,13 +5,14 @@ from folium.plugins import MarkerCluster
 def create_map(data):
 	m = folium.Map(location=list(data[0][3]), zoom_start=12)
 	marker_cluster = MarkerCluster().add_to(m)
-	colors = ['red', 'blue', 'green', 'purple', 'orange', 'darkred','lightred', 'beige', 'darkblue', 'darkgreen', 'cadetblue', 'darkpurple', 'white', 'pink', 'lightblue', 'lightgreen', 'gray', 'black', 'lightgray']
+	colors = ['lightgreen', 'green', 'darkgreen', 'red', 'blue', 'purple', 'orange', 'darkred','lightred', 'darkblue',
+	 'cadetblue', 'darkpurple', 'white', 'pink', 'lightblue', 'gray', 'black', 'lightgray']
 	for pair in data:
 		create_markers_pairs(marker_cluster,pair,colors,m)
 	return m
 
 
-def create_markers_pairs(marker_cluster,pair,colors,m):
+def create_markers_pairs(marker_cluster,pair,colors: [str],m) -> None:
 	folium.Marker(
 	    list(pair[3]),
 	    popup=pair[1],

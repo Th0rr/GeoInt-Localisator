@@ -85,10 +85,3 @@ def progress(count, total, status=''):
 
     sys.stdout.write('[%s] %s%s ...%s\r' % (bar, percents, '%', status))
     sys.stdout.flush() 
-
-def scrape_image(address):
-	url = "https://www.google.fr/maps/place/"+address
-	time.sleep(3)
-	
-	print(urlimg)
-	driver.quit()

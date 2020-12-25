@@ -11,7 +11,6 @@ from const import *
 
 
 def get_coord_by_geopy(address: str,query: str) -> (float,float):
-	#time.sleep(WAIT_TIME) # avoid getting blacklisted by geopy
 	if "," in address:
 		address = address.split(",")[1] # fix some error where address is not detected correctly
 	try :
@@ -31,7 +30,6 @@ def get_coord_by_geopy(address: str,query: str) -> (float,float):
 
 def get_address_by_geopy(coords: (float,float)) -> str:
 	"""take GPS coords as Input and return full address """
-	#time.sleep(WAIT_TIME)
 	geolocator = Nominatim(user_agent="georev")
 	location = geolocator.reverse(coords)
 	if location :
