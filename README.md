@@ -11,22 +11,22 @@
 
 
 # Use
--q/--query => Google map queries 
-Ex: -q town store1!town store2 additional_query_info
+-q/--query => Google map queries<br/> 
+Ex: -q town store1!town store2 additional_query_info<br/>
 If you want to know if your query is correct, check it on google maps before and see if you obtain desired result.
 It is for instance
 
--s/--scope => Filter results above specified distance in a locations pair (km). Default value is 0.75.
+-s/--scope => Filter results above specified distance in a locations pair (km). Default value is 0.75.<br/>
 Ex: -s 0.5
 
--o/--output => Export to text file 
+-o/--output => Export to text file<br/>
 Ex: -o address.txt
 
 -M/--map => Create map and show location of targets by pair on a local map.
 
 -A/--AInfos => Gives you the whole addresses with reverse-geocoding (slower), use "full"
 	for all addresses, and "selection" to get only the addresses you will selected
-	We don't recommend using the full option if you expect a lot of results.
+	We don't recommend using the full option if you expect a lot of results.<br/>
 Ex : -A selection
 Bug : In some cases, the reverse geocoding can lead to false results being displayed on the map. This is due to a geopy data error.
 
