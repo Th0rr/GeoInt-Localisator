@@ -45,7 +45,7 @@ def mapping(selection,command_line):
 	name = name.replace(":",",")
 	m.save(name)
 	move_file_by_ext("Maps",".html")
-	webbrowser.open(os.path.join(os.getcwd(),"Maps",name))
+	webbrowser.open("file://"+os.path.join(os.getcwd(),"Maps",name))
 
 
 def write_to_text(final_results,filename):

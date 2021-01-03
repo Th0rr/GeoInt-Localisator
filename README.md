@@ -11,8 +11,9 @@
 
 
 # Use
--q/--query => Google map queries<br/> 
-Ex: -q town store1!town store2 additional_query_info<br/>
+-q/--query => Google map queries, separated by a "."<br/> 
+Ex: -q town store1.town store2 additional_query_info<br/>
+Where town store1 is your first Gmap query, and town store2 your second <br/>
 If you want to know if your query is correct, check it on google maps before and see if you obtain desired result.
 It is for instance possible to add words like "clothes" to make sure scraped addresses are relevant.<br/>
 

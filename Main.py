@@ -7,7 +7,7 @@ from menu_interactions import *
 parser = argparse.ArgumentParser()
 parser.add_argument(
 	'-q', '--queries', required=True, type=str, 
-	help="""Google map queries ex: -q town store1!town store2 additional_query_info\n
+	help="""Google map queries ex: -q town store1.town store2 additional_query_info\n
 	""",nargs='*')
 
 parser.add_argument(
@@ -34,8 +34,8 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-if args.queries :
-	command_line = (" ".join(args.queries)).split("!")
+if  args.queries:
+	command_line = (" ".join(args.queries)).split(".")
 	final_results = broad_search(command_line[0],command_line[1],args)
 	print_results(final_results,command_line[0],command_line[1])
 
@@ -61,3 +61,4 @@ if args.queries :
 
 else:
 	print("Enter valid options")
+	print(args.queries)
