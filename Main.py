@@ -4,7 +4,7 @@ from const import *
 from menu_interactions import *
 
 
-parser = argparse.ArgumentParser(description='See readme')
+parser = argparse.ArgumentParser()
 parser.add_argument(
 	'-q', '--queries', required=True, type=str, 
 	help="""Google map queries ex: -q town store1!town store2 additional_query_info\n
